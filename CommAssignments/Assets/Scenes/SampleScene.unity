@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 280508416}
   - component: {fileID: 280508418}
   - component: {fileID: 280508417}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Flat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4305,7 +4305,7 @@ GameObject:
   - component: {fileID: 626919203}
   - component: {fileID: 626919202}
   - component: {fileID: 626919201}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hilly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4560,11 +4560,12 @@ MonoBehaviour:
   controller: {fileID: 777263812}
   speed: 100
   gravity: -9.8
+  jumpHeight: 3
   groundCheck: {fileID: 377013419}
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
 --- !u!43 &722402984
 Mesh:
   m_ObjectHideFlags: 0
@@ -4735,7 +4736,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17670
+  m_Name: pb_Mesh17698
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6382,7 +6383,7 @@ GameObject:
   - component: {fileID: 1129946526}
   - component: {fileID: 1129946525}
   - component: {fileID: 1129946524}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Depressed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6458,7 +6459,7 @@ GameObject:
   - component: {fileID: 1260867217}
   - component: {fileID: 1260867216}
   - component: {fileID: 1260867215}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mountain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7235,7 +7236,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1915176105}
   - component: {fileID: 1915176104}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TerrainGroup_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
