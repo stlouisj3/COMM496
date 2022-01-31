@@ -551,7 +551,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 377013418}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.093, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 777263813}
@@ -4558,9 +4558,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 777263812}
-  speed: 100
+  speed: 500
   gravity: -9.8
-  jumpHeight: 3
+  jumpHeight: 5
   groundCheck: {fileID: 377013419}
   groundDistance: 0.4
   groundMask:
@@ -6370,7 +6370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e660514f16d63e34bae0867d79778467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 100
+  mouseSensitivity: 500
   playerBody: {fileID: 777263813}
 --- !u!1 &1129946523
 GameObject:
