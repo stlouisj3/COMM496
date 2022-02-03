@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Acts like the red coin from mario and will spawn other coins
 public class RedCoin : MonoBehaviour
 {
     public GameObject coin;
     public Transform[] pos;
-    public Trophy trophy;
+    public CollectableManager trophy;
     //private int numPos;
 
     void OnTriggerEnter(Collider coll)

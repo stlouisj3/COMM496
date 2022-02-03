@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Used for coins to allow coin to disapear and add one to the counter
 public class Coin : MonoBehaviour
 {
     //public float collected = 0f;
     public float timer = 15f;
-    public Trophy trophy;
+    public CollectableManager trophy;
     void Start()
     {
         StartCoroutine(CountDown());
