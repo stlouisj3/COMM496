@@ -8,7 +8,8 @@ public class RedCoin : MonoBehaviour
     public Transform[] pos;
 
     //private int numPos;
-
+   
+    
     void OnTriggerEnter(Collider coll)
     {
         Trophy.RedCoinCollected();
