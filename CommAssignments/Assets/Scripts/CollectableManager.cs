@@ -12,7 +12,7 @@ public class Trophy : MonoBehaviour
     // 1. Declare a delegate: 
     public delegate void CollectionEvent ();
     // 2. Declare a Specific Event
-    pubblic static event CollectionEvent RedCoinCollected;
+    public static event CollectionEvent RedCoinCollected;
     
     // Is more of a collectable manager
     void Start()
