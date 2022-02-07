@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
-  /*  public GameObject objectToPool;
+    /*
+    public GameObject objectToPool;
 
     public List<GameObject> thePool = new List<GameObject>();
 
@@ -30,14 +31,28 @@ public class ObjectPool : MonoBehaviour
     {
         GameObject toReturn;
 
-
-        toReturn = thePool[0];
-        thePool.RemoveAt(0);
+        if(thePool.Count > 0)
+        {
+            toReturn = thePool[0];
+            thePool.RemoveAt(0);
+        }
+        else
+        {
+            toReturn = Instantiate(objectToPool);
+            toReturn.tranform.parent = transform;
+        }
+       
 
         toReturn.setActive(true);
         toReturn.transform.position = position;
         toReturn.transform.rotation = rotation;
 
         return toReturn;
+    }
+
+    public void ReturnObject(GameObject objectToReturn)
+    {
+        thePool.Add(objectToReturn);
+        objectToReturn.SetActive(false);
     }*/
 }
