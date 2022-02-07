@@ -8,10 +8,17 @@ public class Trophy : MonoBehaviour
     public Transform pos;
     public float collected = 0f;
     public float totalCoins = 5f;
+    
+    // 1. Declare a delegate: 
+    public delegate void CollectionEvent ();
+    // 2. Declare a Specific Event
+    pubblic static event CollectionEvent RedCoinCollected;
+    
     // Is more of a collectable manager
     void Start()
     {
         collected = 0f; 
+        RedCoinCollected += Collected();
     }
 
     // Update is called once per frame
