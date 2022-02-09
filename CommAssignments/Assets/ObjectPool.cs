@@ -2,57 +2,76 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class ObjectPool : MonoBehaviour
 {
-    /*
-    public GameObject objectToPool;
 
-    public List<GameObject> thePool = new List<GameObject>();
+   
+    [System.Serializable]
+    public class Pool
+    {
+        public string tag;
+        public GameObject prefab;
+        public int size;
+    }
 
-    public int startAmount;
+    #region Singleton
 
-    // Start is called before the first frame update
+    public static ObjectPool Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    #endregion
+
+    public List<Pool> pools;
+    public Dictionary<string, Queue<GameObject>> poolDictionary;
+
     void Start()
     {
-       for(int i = 0; i < startAmount; i++)
-        {
-            thePool.Add(Instantiate(objectToPool));
-            thePool[i].setActive(false);
-            thePool[i].transform.parent = transform;
-        } 
-    }
+        poolDictionary = new Dictionary<string, Queue<GameObject>>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public GameObject SpawnObject(Vector3 position, Quaternion rotation)
-    {
-        GameObject toReturn;
-
-        if(thePool.Count > 0)
+        foreach(Pool pool in pools)
         {
-            toReturn = thePool[0];
-            thePool.RemoveAt(0);
+            Queue<GameObject> objectPool = new Queue<GameObject>();
+
+            for (int i = 0; i < pool.size; i++)
+            {
+                GameObject obj = Instantiate(pool.prefab);
+                obj.SetActive(false);
+                objectPool.Enqueue(obj);
+            }
+            poolDictionary.Add(pool.tag, objectPool);
         }
-        else
+    }
+    public GameObject SpawnFromPool(string tag, Vector3 position, Quaternion rotation)
+    {
+
+        if (!poolDictionary.ContainsKey(tag))
         {
-            toReturn = Instantiate(objectToPool);
-            toReturn.tranform.parent = transform;
+            Debug.LogWarning("Pool with tag " + tag + "Dosent Exist");
+            return null;
         }
-       
 
-        toReturn.setActive(true);
-        toReturn.transform.position = position;
-        toReturn.transform.rotation = rotation;
+        GameObject objectToSpawn = poolDictionary[tag].Dequeue();
 
-        return toReturn;
+        objectToSpawn.SetActive(true);
+        objectToSpawn.transform.position = position;
+        objectToSpawn.transform.rotation = rotation;
+
+        PooledObject pooledObj = objectToSpawn.GetComponent<PooledObject>();
+
+        if(pooledObj != null)
+        {
+            pooledObj.OnObjectSpawn();
+        }
+
+        poolDictionary[tag].Enqueue(objectToSpawn);
+
+        return objectToSpawn;
     }
 
-    public void ReturnObject(GameObject objectToReturn)
-    {
-        thePool.Add(objectToReturn);
-        objectToReturn.SetActive(false);
-    }*/
 }
