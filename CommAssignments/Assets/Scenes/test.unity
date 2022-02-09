@@ -223,6 +223,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8773177419293035987, guid: 8203b4f2d4cf7894abb3af4de8009f63, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8203b4f2d4cf7894abb3af4de8009f63, type: 3}
+--- !u!1 &224146773 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8773177419293035984, guid: 8203b4f2d4cf7894abb3af4de8009f63, type: 3}
+  m_PrefabInstance: {fileID: 693574930}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &310600460
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,6 +436,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4ccf498a18345428520212d0d2864c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin: {fileID: 224146773}
+  pos:
+  - {fileID: 1622396162}
+  - {fileID: 8292546}
+  amount: 0
 --- !u!1 &685741163
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,7 +699,6 @@ GameObject:
   - component: {fileID: 1237578543}
   - component: {fileID: 1237578542}
   - component: {fileID: 1237578545}
-  - component: {fileID: 1237578546}
   m_Layer: 0
   m_Name: First Person Controller
   m_TagString: Untagged
@@ -765,18 +774,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a336f7b319a7354e9e2089edac7060f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1237578546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1237578541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdfc4c237bd703d4c8a4723516da45db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  collected: 0
+  totalCoins: 3
 --- !u!1 &1334973241
 GameObject:
   m_ObjectHideFlags: 0

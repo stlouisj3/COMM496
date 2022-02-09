@@ -4,8 +4,9 @@ using UnityEngine;
 //Used for coins to allow coin to disapear and add one to the counter
 public class Coin : MonoBehaviour
 {
-    /*//public float collected = 0f;
+    //public float collected = 0f;
     public float timer = 15f;
+    public int amount;
     //public CollectableManager trophy;
     void Start()
     {
@@ -13,7 +14,7 @@ public class Coin : MonoBehaviour
     }
     void OnTriggerEnter(Collider coll)
     {
-        trophy.Collected();
+        CollectableManager.RedCoinCollected(amount);
         Destroy(this.gameObject);
     }
     IEnumerator CountDown()
@@ -39,5 +40,5 @@ public class Coin : MonoBehaviour
 
             Destroy(this.gameObject);
         }
-    }*/
+    }
 }
