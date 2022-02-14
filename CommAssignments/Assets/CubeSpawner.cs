@@ -24,10 +24,10 @@ public class CubeSpawner : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (spawnerStartered)
-        {
+        /*if (spawnerStartered)
+        {*/
             objectPool.SpawnFromPool("Cube", transform.position, Quaternion.identity);
-        }
+        //}
         
     }
 }
