@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class lightLerp : MonoBehaviour
 {
-    /*public float smooth = 2;
+    public float smooth = 2f;
     private Color newColor;
+    private Color colorA = Color.magenta;
+    private Color colorB = Color.yellow;
 
     void Awake()
     {
-        newColor = light.color;
+        GetComponent<Light>().color = newColor;
     }
     
 
@@ -21,8 +23,7 @@ public class lightLerp : MonoBehaviour
 
     void ColorChanging()
     {
-        Color colorA = Color.magenta;
-        Color colorA = Color.yellow;
+       
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
@@ -33,6 +34,6 @@ public class lightLerp : MonoBehaviour
             newColor = colorB;
         }
 
-        light.color = Color.Lerp(light.color, newColor, Time.deltaTime * smooth);
-    }*/
+        GetComponent<Light>().color = Color.Lerp(GetComponent<Light>().color, newColor, Time.deltaTime * smooth);
+    }
 }

@@ -354,7 +354,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -440,7 +440,7 @@ MonoBehaviour:
   pos:
   - {fileID: 1622396162}
   - {fileID: 8292546}
-  amount: 0
+  amount: 1
 --- !u!1 &685741163
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,6 +594,10 @@ PrefabInstance:
     - target: {fileID: 8773177419293035984, guid: 8203b4f2d4cf7894abb3af4de8009f63, type: 3}
       propertyPath: m_Name
       value: Collect Coin (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773177419293035987, guid: 8203b4f2d4cf7894abb3af4de8009f63, type: 3}
+      propertyPath: amount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8773177419293035987, guid: 8203b4f2d4cf7894abb3af4de8009f63, type: 3}
       propertyPath: trophy
@@ -1689,6 +1693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2755d6806994e4f4cadcb4968ad8d5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smooth: 2
 --- !u!108 &1658374890
 Light:
   m_ObjectHideFlags: 0
@@ -1700,14 +1705,14 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Intensity: 15
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1743,7 +1748,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -1759,7 +1764,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658374888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 78.23, y: 8.25, z: 11.45}
+  m_LocalPosition: {x: 78.23, y: 8.3, z: 11.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
